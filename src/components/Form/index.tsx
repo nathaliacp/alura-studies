@@ -1,44 +1,42 @@
-import React from "react";
 import Button from "../Button";
 import style from "./Form.module.scss";
-class Form extends React.Component {
 
-	render(): React.ReactNode {
-		return(
-			<form className={ style.newTask }>
-				<div className={ style.inputContainer }>
-					<label htmlFor="task">
+function Form() {
+
+	return (
+		<form className={ style.newTask }>
+			<div className={ style.inputContainer }>
+				<label htmlFor="task">
 						Add a new topic to study
-					</label>
+				</label>
 
-					<input 
-						id="task" 
-						type="text" 
-						name="task" 
-						required 
-						placeholder="What do you want to study?" />
-				</div>
+				<input 
+					id="task" 
+					type="text" 
+					name="task" 
+					required 
+					placeholder="What do you want to study?" />
+			</div>
 
-				<div className={ style.inputContainer }>
-					<label htmlFor="time">
+			<div className={ style.inputContainer }>
+				<label htmlFor="time">
 						Time
-					</label>
+				</label>
 
-					<input 
-						id="time" 
-						type="time" 
-						name="time" 
-						step="1" 
-						min="00:00:00" 
-						max="01:30:00" />
-				</div>
+				<input 
+					id="time" 
+					type="time" 
+					name="time" 
+					step="1" 
+					min="00:00:00" 
+					max="01:30:00" />
+			</div>
 
-				<Button>
+			<Button>
 					Add
-				</Button>
-			</form>
-		);
-	}
+			</Button>
+		</form>
+	);
 }
 
 export default Form;
