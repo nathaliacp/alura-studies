@@ -18,6 +18,6 @@ module.exports = {
     "quotes": ["error", "double"],
     "jsx-quotes": ["error", "prefer-double"],
     "react/prop-types": 0,
-    "indent": ["error", 2],
+    "indent": ["error", "tab"],
   },
 }
