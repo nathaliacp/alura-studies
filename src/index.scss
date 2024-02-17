@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Manjari&display=swap');
+
+html, body, div, span,
+h1, h2, h3, p, ul, li, 
+form, label, aside, time {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+ul {
+	list-style: none;
+}
+
+input {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	color: inherit;
+}
+
+button {
+	border: unset;
+	background-color: unset;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	color: inherit; 
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	font-family: 'Manjari', sans-serif;
+	color: #F0F0F0;
+	background-color: #4C4C4C;
+	height: 100%;
+	width: 100%;
+	padding: 16px;
+	box-sizing: border-box;
+	line-height: 1;
+}
+
+#root {
+	width: 100%;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: unset;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 4px;
+	background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}

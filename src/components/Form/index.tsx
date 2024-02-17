@@ -13,7 +13,8 @@ function Form({ setTasks }: Props) {
 	const [ name, setName ] = useState(""); 
 	const [ time, setTime ] = useState("00:00");
 
-	const addTask = () => {
+	const addTask = (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
 		setTasks(tasks => 
 			[	...tasks, 
 				{	
@@ -30,7 +31,7 @@ function Form({ setTasks }: Props) {
 	};
 
 	return(
-		<form className={ style.newTask } onSubmit={() => addTask()}>
+		<form className={ style.newTask } onSubmit={(e) => addTask(e)}>
 			<div className={ style.inputContainer }>
 				<label htmlFor="task">
 						Add a new topic to study
@@ -41,7 +42,7 @@ function Form({ setTasks }: Props) {
 					type="text" 
 					name="task" 
 					value={name}
-					onChange={(e) => this.setName(e.target.value)}
+					onChange={(e) => setName(e.target.value)}
 					required 
 					placeholder="What do you want to study?" />
 			</div>
@@ -56,7 +57,7 @@ function Form({ setTasks }: Props) {
 					type="time" 
 					name="time" 
 					value={time}
-					onChange={(e) => this.setTime(e.target.value)}
+					onChange={(e) => setTime(e.target.value)}
 					step="1" 
 					min="00:00:00" 
 					max="01:30:00" />
