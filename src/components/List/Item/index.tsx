@@ -22,7 +22,7 @@ export default function Item({ name, time, selected, completed, id, selectTask }
 			<h3>{ name }</h3>
 			<span>{ time }</span>
 			{ completed && 
-			<span className={style.checked} aria-label="completed task"></span>}
+			<span className={ style.checked } aria-label="completed task"></span>}
 		</li>
 	);
 }

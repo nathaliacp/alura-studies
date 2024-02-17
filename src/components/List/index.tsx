@@ -16,7 +16,7 @@ function List({ tasks, selectTask }: Props) {
 			<ul>
 				{
 					tasks.map(task => 
-						<Item key={ task.id } selectTask={selectTask} {...task}/>)
+						<Item key={ task.id } selectTask={ selectTask } { ...task }/>)
 				}
 			</ul>
 		</aside>

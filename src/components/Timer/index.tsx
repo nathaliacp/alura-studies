@@ -17,7 +17,7 @@ export default function Timer({ selected, completeTask }: Props) {
 		if (selected?.time) {
 			setTime(timeToSeconds(selected.time));
 		}
-	}, [selected]);
+	}, [ selected ]);
 
 	function returnTimer(counter: number = 0) {
 		setTimeout(() => {
@@ -34,7 +34,7 @@ export default function Timer({ selected, completeTask }: Props) {
 			<p className={ style.title }>Pick a card and start the timer</p>
 
 			<div className={ style.clockWrapper }>
-				<Clock time={time}/>
+				<Clock time={ time }/>
 			</div>
 
 			<Button onClick={() => returnTimer(time)}>
