@@ -1,21 +1,13 @@
+import { ITask } from "../../types/task";
 import Item from "./Item";
 import style from "./List.module.scss";
 
-function List() {
-	const tasks = [
-		{
-			name: "React",
-			time: "02:00:00",
-		},
-		{
-			name: "JavaScript",
-			time: "01:00:00",
-		},
-		{
-			name: "TypeScript",
-			time: "03:00:00",
-		},
-	];
+interface Props {
+	tasks: ITask[],
+	selectTask: (selectedTask: ITask) => void
+}
+
+function List({ tasks, selectTask }: Props) {
 
 	return(
 		<aside className={ style.tasksList }>
@@ -23,7 +15,8 @@ function List() {
 
 			<ul>
 				{
-					tasks.map((task, index) => <Item key={ index } name={task.name} time={task.time}/>)
+					tasks.map(task => 
+						<Item key={ task.id } selectTask={selectTask} {...task}/>)
 				}
 			</ul>
 		</aside>
