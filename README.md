@@ -23,4 +23,4 @@ When you click on Start, it will decrease until it reaches "00:00" and the task 
 
 ## Here's the [link](https://cursos.alura.com.br/certificate/b3570287-fe72-4e75-ba78-8c5299418c9a?lang=en) to my certificate.
 
-## Here is the [link]()  to project deployment.
+## Here is the [link](https://alura-studies-r8vb051qi-nathaliacp.vercel.app/)  to project deployment.
