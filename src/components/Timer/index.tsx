@@ -18,6 +18,15 @@ export default function Timer({ selected }: Props) {
 		}
 	}, [selected]);
 
+	function returnTimer(counter: number = 0) {
+		setTimeout(() => {
+			if(counter > 0) {
+				setTime(counter - 1);
+				return returnTimer(counter - 1);
+			}
+		}, 1000);
+	}
+
 	return(
 		<div className={ style.timer }>
 			<p className={ style.title }>Pick a card and start the timer</p>
@@ -26,7 +35,7 @@ export default function Timer({ selected }: Props) {
 				<Clock time={time}/>
 			</div>
 
-			<Button>
+			<Button onClick={() => returnTimer(time)}>
 				Start
 			</Button>
 		</div>
